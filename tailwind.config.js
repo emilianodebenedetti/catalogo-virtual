@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         green: '#53C151',
         red: '#A31818',
+        grey: '#EBEBEB',
+        redGradient: '#FF7676'
       }
     },
   },
