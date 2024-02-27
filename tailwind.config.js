@@ -7,10 +7,10 @@ module.exports = {
         green: '#53C151',
         red: '#A31818',
         grey: '#EBEBEB',
-        redGradient: '#FF7676'
+        white: '#ffffff',
+        redGradient: '#FF7676',
       }
     },
   },
   plugins: [require("daisyui")],
 }
- 

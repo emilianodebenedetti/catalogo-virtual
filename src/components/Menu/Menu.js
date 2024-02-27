@@ -34,7 +34,6 @@ const Menu = () => {
                         <button className="bg-red border-none w-8 h-8 text-white text-xl rounded-tl-xl rounded-br-xl">+</button>
                     </div>
                 </div>
-                
             </div>
         </div>
         <div className="collapse collapse-plus border border-slate-300">
