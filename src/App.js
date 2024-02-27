@@ -10,13 +10,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Navbar /> */}
-        {/* <Carousel /> */}
+        <Navbar />
+        <Carousel />
       </header>
- {/*      <Slogan />
+      <Slogan />
       <Menu />
-      <Footer/> */}
-      <AddProduct/>
+      <Footer/>
+      {/* <AddProduct/> */}
     </div>
   );
 }
