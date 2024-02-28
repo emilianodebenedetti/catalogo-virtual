@@ -1,9 +1,10 @@
 import React from 'react'
+import Cart from './Cart'
 
 const AddProduct = () => {
   return (
     <dialog id="my_modal_1" className="modal">
-        <div className="m-2 card bg-grey shadow-inner shadow">
+        <div className="m-2 card bg-grey h-full shadow-inner shadow">
             <h1 className='text-center text-xl text-black font-bold py-4'>Agregando producto</h1>
             <figure className="p-2 ">
                 <img className='rounded-xl shadow' src="https://pizzeriaildiavolo.com/wp-content/uploads/2023/05/550C985B-2C68-49EB-BFCC-4A89C33B0402-scaled.jpeg" alt="Imagen pizza 4 quesos"/>
@@ -32,8 +33,9 @@ const AddProduct = () => {
                     </div>
                     <textarea className="textarea bg-white h-24 rounded-b-xl rounded-t-none shadow" placeholder="Información necesaria a considerar ..."></textarea>
                 </label>
-                <div className="card-actions grid w-full p-2">
-                    <button className="btn bg-green border-none text-white">AGREGAR AL CARRO - $ 400</button>
+                <div className="card-actions grid w-full ">
+                    <button className="btn bg-green border-none text-white" onClick={()=>document.getElementById('cart').showModal()}>AGREGAR AL CARRO - $ 400</button>
+                    <Cart/>
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>

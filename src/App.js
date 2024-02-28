@@ -1,10 +1,10 @@
 import './App.css';
-import AddProduct from './components/Card/AddProduct';
 import Carousel from './components/Carousel/Carousel';
 import Footer from './components/Footer/Footer';
 import Menu from './components/Menu/Menu';
 import Navbar from './components/Navbar/Navbar';
 import Slogan from './components/Slogan/Slogan';
+
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Slogan />
       <Menu />
       <Footer/>
-      {/* <AddProduct/> */}
+      {/* <Cart /> */}
     </div>
   );
 }
