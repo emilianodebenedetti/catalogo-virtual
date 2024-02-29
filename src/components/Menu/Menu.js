@@ -2,12 +2,11 @@ import React from 'react'
 import AddProduct from '../Cart/AddProduct'
 
 
-
 const Menu = () => {
   return (
     <div className='grid gap-2 px-2 pt-2 rounded text-center'>
         <div className="collapse collapse-plus border border-slate-300">
-            <input type="radio" name="my-accordion-3" />{/* defaultChecked */} 
+            <input type="radio" name="my-accordion-3" />{/* defaultChecked */}
             <div className="collapse-title text-xl font-medium">
                 PIZZAS {/* for each category */}
             </div>
