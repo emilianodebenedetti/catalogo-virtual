@@ -15,8 +15,7 @@ function App() {
       </header>
       <Slogan />
       <Menu />
-      <Footer/>
-      {/* <Cart /> */}
+      <Footer />
     </div>
   );
 }
