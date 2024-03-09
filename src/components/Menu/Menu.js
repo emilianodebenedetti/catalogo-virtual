@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import AddProduct from '../Cart/AddProduct';
 import axios from 'axios';
+import ProductCard from './ProductCard';
 
 const Menu = () => {
     const [categorias, setCategorias] = useState([]);
@@ -41,13 +41,10 @@ const Menu = () => {
     const handleCategoriaClick = (categoria) => {
         setCategoriaSeleccionada(categoria);
     };
-/* 
-    useEffect(() => {
-        console.log(categoriaSeleccionada); 
-    }, [categoriaSeleccionada]);  */
 
     return (
         <div className='grid gap-2 px-2 pt-2 rounded text-center'>
+            {/* Listo categorias mediante map*/}
             {categorias.map(categoria => (
                 <div className="collapse collapse-plus border border-slate-300" key={categoria.id} onClick={() => handleCategoriaClick(categoria)}>
                     <input type="radio" name="my-accordion-3" />
@@ -55,21 +52,11 @@ const Menu = () => {
                         {categoria.nombre}
                     </div>
                     <div className="collapse-content bg-grey">
+                    {/* listo productos que corresponden a la categoria seleccionada */}
                     {loading && <span className="loading loading-spinner loading-lg text-red"></span>}
                         {!loading && productos.length > 0 ? (
                             productos.map(producto => (
-                                <div className="flex card card-side shadow-md my-2 border border-slate-300 bg-gradient-to-t from-grey to-redGradient text-black" key={producto.id}>
-                                    <figure className='w-40'><img className='h-full w-full object-cover' src={producto.imagen} alt={producto.nombre} /></figure>
-                                    <div className="flex-grow grid py-4 px-4 text-left">
-                                        <h2 className="card-title font-bold">{producto.nombre}</h2>
-                                        <p className='text-pretty overflow-hidden max-w-[200px]'>{producto.descripcion}</p>
-                                        <span className='text-xl font-bold'>$ {producto.precio}</span>
-                                    </div>
-                                    <div className="absolute right-0 bottom-0">
-                                        <button className="bg-red border-none w-8 h-8 text-white text-xl rounded-tl-xl rounded-br-xl" onClick={() => document.getElementById('my_modal_1').showModal()}>+</button>
-                                        <AddProduct />
-                                    </div>
-                                </div>
+                                <ProductCard key={producto.id} producto={producto} />
                             ))
                         ) : (
                             !loading && <p>No hay productos disponibles</p>
